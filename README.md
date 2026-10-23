@@ -54,9 +54,12 @@ Run the synthetic transport integration and independent counterexamples with:
     python -B -m unittest candidate_protocol.redteam.test_reader_contract
 
 See [the injectable transport contract](candidate_protocol/TRANSPORT.md). Default transport is
-unwired and BLOCKED; the real complete-body route remains unavailable. No real task is dispatched by tests.
+unwired and BLOCKED. No real task is dispatched by tests.
 
-Latest de-identified live-gap checkpoint: [connectivity status](docs/CONNECTIVITY_STATUS.md) and
-[single-canary acceptance specification](docs/CONNECTIVITY_ACCEPTANCE.md). Full-body retrieval is BLOCKED
-(content_omitted); no canary was sent. That checkpoint records read-only live evidence;
-the separate transport tests above use generated fixtures only.
+Latest [real single-message acceptance](docs/LIVE_ACCEPTANCE.md): one native DOT send to the existing
+Chat, receiver execution and coordinated UI pull-return to parent DOT passed within scope. The full
+assistant reply matched a fresh task/nonce and an independent arithmetic oracle. Evidence is a
+parent-relayed browser-worker observation; formal assistant message UUID was not independently visible.
+Automatic callback, native complete-body reader, database ingestion and full bridge acceptance remain
+unverified. The separate transport suites above use generated fixtures only. The prior 265-method
+save point was not rerun for this documentation-only checkpoint.

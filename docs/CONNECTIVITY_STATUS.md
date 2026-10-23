@@ -1,33 +1,29 @@
-# DOT → Chat：真實連通狀態
+# DOT to Chat connectivity status
 
-本檔只保存去機密的進度摘要，不包含聊天全文、真實訊息／對話識別碼、原始工具回條或認證資料。
-此頁記錄唯讀查證及文件保存階段，當時沒有派工、領取／取消任務、提交結果、部署或權限變更。
-後續注入式 adapter 的本機 fixture 整合請見 [transport contract](../candidate_protocol/TRANSPORT.md)；它不改變此頁的真實鏈路阻塞。
+Latest checkpoint: **one real native dispatch, Chat execution and coordinated
+UI pull-return to parent DOT passed within scope**. Read the observations,
+provenance and limits in [real acceptance](LIVE_ACCEPTANCE.md).
 
-| 階段 | 已有證據 | 尚未通過的驗收 |
+| Stage | Observed | Remaining limit |
 |---|---|---|
-| DOT 派送 → Chat 接收 | 歷史原生派送的使用者訊息及 completed 回合存在 | 這只能證明收件／回覆存在；不等於執行、全文回傳或入庫成功 |
-| 實際執行 | 舊測試提示已包含預期答案 | 不能作獨立執行證據；實際模型與 host mode 仍 unknown |
-| 完整結果回到 DOT | 本機原生讀取只提供 content reference；父執行緒另報告精確全域讀取亦省略正文 | **BLOCKED**：assistant text 為空、content_omitted=true、truncated=false、無 cursor，並非分頁或輸出截斷 |
-| 原部署入庫 | 固定合成任務的唯讀狀態為 cancelled、revision 2、claim_attempts 0、result null | 沒有實際領取、結果入庫或 exactly-once 證據；它與歷史原生測試是不同任務 |
-| Callback／自動派送 | 健康查詢回報派送未驗證、events 停用 | 沒有真實 callback、外部模型執行或完整橋接成功證據 |
+| Dispatch | One acknowledged native send to the existing Chat; no resend | Receipt supplied no message ID |
+| Execution | Fresh task/nonce; prompt did not contain the expected output; complete assistant JSON matched independent arithmetic | Actual model unknown |
+| Complete reply | Authorized worker saw full assistant JSON; parent read and relayed the worker report | Formal assistant message UUID not independently visible; no raw native full-body receipt |
+| Return to DOT | Parent received the full result through coordinated UI pull-return | No automatic callback or unattended reader |
+| Ingestion | Neither original probe nor candidate database was used | Original lifecycle, ingestion and cross-system exactly-once unverified |
 
-父執行緒的全域讀取結果在此列為「父回報」，沒有冒充本機直接取得的完整正文。
-摘要、預覽、queued、面板開啟、手動算出的答案與模型自述都不能補上缺失的證據。
+Prior reader diagnostics remain distinct: an exact global read returned an
+empty assistant text with `content_omitted=true`, `truncated=false` and no cursor.
+The observed UI body does not repair that reader. Historical search snippets,
+the legacy answer-disclosing prompt, queued receipts and open panels are not
+used as independent execution evidence for this new test.
 
-## 原碼與離線成果
+The fixed probe plugin's current read-only health still reports disabled events,
+no external model calls and Chat/Work acceptance unmet. It is a separate route.
+Do not write this native test into an old cancelled task or treat local outbox
+data as an external acknowledgement.
 
-- 正常 Sites 來源中繼資料、已授權 repo 的限縮搜尋與原來源 thread 讀取，尚未提供可讀原始碼。
-  搜尋範圍／索引有限，不能據此斷言原碼不存在；沒有重試不可見 archive 或建立來源存取憑證。
-- 原 36 項資料庫／12 項面板測試仍未取得，原部署 lifecycle 相容性未驗證。
-- 已保存的離線候選紀錄為 190 個測試方法（90 + 67 + 33），獨立審查記錄 340 個子案例；
-  45 列反例矩陣中 36 RUN、9 PARTIAL。這是先前的本機結果，本輪文件更新未重跑測試。
-- 離線測試及本機 outbox 不代表真實投遞、完整正文回傳、原部署入庫或跨系統 exactly-once 成功。
-
-## 下一步
-
-目前沒有已證實可用的完整正文回讀通路；**canary 未核准、未派送**。不再反覆讀取相同省略內容。
-必須先有正文通路已恢復的實質新證據，並取得新的明確核准，才可按
-[單次驗收規格](CONNECTIVITY_ACCEPTANCE.md) 執行。這份規格不是執行紀錄或自動執行授權。
-
-本輪不改 main、不改既有固定任務，也不把新候選視為找回的原 bridge。
+Missing original source and original 36 database / 12 panel tests remain missing.
+The 265 passing local fixture/protocol methods are a previous save point, not
+live acceptance. No new tests, task dispatch, deployment or permission changes
+were made while saving this checkpoint. Main is unchanged.

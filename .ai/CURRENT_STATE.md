@@ -1,6 +1,6 @@
 # Current state
 
-Readable local evidence utilities and 90 test methods are preserved. Account captures were replaced with generated synthetic fixtures; a minimal pure-code history snapshot replaces the original raw archive dependency. This repository proves no live delivery.
+Readable local evidence utilities and 90 test methods are preserved. Account captures were replaced with generated synthetic fixtures; a minimal pure-code history snapshot replaces the original raw archive dependency. The latest separately recorded real test proves only its bounded native-send/UI-return scope.
 
 Original bridge source and original 36 database / 12 panel tests are missing. Original deployment commit and archive checksum are metadata only. Lifecycle, provider binding, actual mode/model, push callback and full bridge acceptance remain unverified. See docs/FINAL_HANDOFF.md and docs/REBUILD_GATES.md.
 
@@ -15,7 +15,10 @@ remains 65,536 UTF-8 bytes. The correction does not resolve omitted bodies or co
 Independent adapter review approved within local fixture scope. It has no live provider binding, external
 callback or deployment. See candidate_protocol/TRANSPORT.md; original/live gates remain NOT RUN.
 
-Latest connectivity-only checkpoint: docs/CONNECTIVITY_STATUS.md. Complete final Chat body is omitted even in
-the parent's precise global read, without truncation/pagination. Full-body return remains BLOCKED; canary is
-not approved or dispatched. That checkpoint is read-only evidence. Separate adapter development runs local
-fixture integration and regression only; no real Chat/Work task or original deployment is touched.
+Latest real checkpoint: docs/LIVE_ACCEPTANCE.md. One newly authorized native Chat send,
+receiver execution and coordinated UI pull-return to parent DOT passed. Parent-relayed worker
+evidence contained the complete assistant JSON, with matching fresh task/nonce and independent
+arithmetic. Formal assistant message UUID remains unverified. The native omitted-body reader,
+automatic callback, actual model and original/candidate database ingestion remain unverified.
+No new dispatch, code, tests, deployment or permissions were added for this status save. The
+prior 265-method result is historical and separate. Do not resend or ingest the completed test.

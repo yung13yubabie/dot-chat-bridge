@@ -8,9 +8,9 @@
 - No background worker or automatic provider action. Reproduce the candidate with the manifest and offline suites.
 
 ## BLOCKED
-- Original source, original tests, provider binding and complete final Chat body are unavailable.
+- Original source, original tests, live adapter binding and a native complete-body reader remain unavailable or unverified.
 - Original lifecycle, lease and result-ingestion contract is unverified.
-- Full-body reader returns content_omitted; no canary until the route demonstrably recovers and fresh approval is given.
+- Native reader content omission is unresolved; UI returned the new result, but automatic readback/callback and formal assistant message UUID remain unverified.
 
 ## DONE
 - Preserve new parsers and 90 local tests with de-identified generated fixtures.
@@ -26,3 +26,5 @@
 - Pass the combined 256-method save-point regression (90 preserved, 92 candidate, 74 independent).
 - Correct the native reader request/body-byte unit mix-up; baseline and poll now use the known accepted 20,000-character request.
 - Add 9 independent strict reader-profile/response contract methods; non-author review and all 265 regressions pass (90/92/83). No real read/send was performed for this correction.
+- Complete one explicitly authorized real native Chat send and coordinated UI pull-return to parent DOT, matching fresh task/nonce/direction and independent arithmetic. No resend, database ingestion or automatic callback; see docs/LIVE_ACCEPTANCE.md.
+- Save the real acceptance scope and concrete minimum reader/host/sink wiring gaps; no additional fixture work or new task.

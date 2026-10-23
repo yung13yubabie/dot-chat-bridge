@@ -22,9 +22,17 @@ The new suite rejects unsupported request arguments, unresolved/omitted content,
 changing request size is not reference resolution. Non-author reader-profile review approved within offline scope.
 Independent adapter review and exact run logs are retained outside the published repository. No live binding
 or external callback exists. Run tools/verify_candidate.py and tools/run_offline_suites.py to reproduce.
-Complete real Chat body and original/live gates remain BLOCKED/NOT RUN.
+Original compatibility and full bridge gates remain BLOCKED/NOT RUN.
 
-Latest live-gap notes: docs/CONNECTIVITY_STATUS.md and docs/CONNECTIVITY_ACCEPTANCE.md. Body retrieval remains
-BLOCKED with content_omitted; original deployed ingestion/callback is unproved and canary was not sent.
-The notes contain no actual conversation/message IDs or raw receipts. Do not retry the same omitted body, send a
-new task, overwrite the fixed probe or infer live success from historical offline tests.
+Latest real evidence: docs/LIVE_ACCEPTANCE.md and docs/CONNECTIVITY_STATUS.md. One fresh native
+Chat send plus coordinated UI pull-return to parent DOT passed within scope. Evidence is the
+parent-relayed browser worker's complete assistant JSON and a saved pre-dispatch oracle; exact
+private identities and raw receipts remain outside Git. The UI did not independently expose
+the assistant message UUID. Native full-body reading, automatic callback and database ingestion
+are not passed. No new test or task was created during this documentation save; the existing
+265 methods were not rerun without code changes. Do not resend, backfill a cancelled probe,
+ingest into the candidate DB or occupy the released shared browser.
+
+Next work is actual supported reader/host/sink wiring, with explicit capability and permission
+checks described in docs/LIVE_ACCEPTANCE.md. No credentials, persistent access or deployment
+were added. Original source is still missing; do not retry denied archives or invent endpoints.
