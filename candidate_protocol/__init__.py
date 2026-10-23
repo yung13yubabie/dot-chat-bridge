@@ -1,4 +1,4 @@
-"""New offline reference protocol, with no provider or transport integration."""
+"""New local reference protocol; optional transport injection has no live binding."""
 
 from .store import Lease, ProtocolError, Reply, Source, Store
 

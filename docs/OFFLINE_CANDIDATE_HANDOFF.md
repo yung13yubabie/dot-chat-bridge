@@ -1,5 +1,8 @@
 # Offline candidate handoff
 
+This records the historical protocol-only save point. The later injected transport and current fixture
+regression are described in ../candidate_protocol/TRANSPORT.md and ../.ai/HANDOFF.md; live gates remain unmet.
+
 This branch is newly authored reconstruction work, based on the exact preserved commit
 `68f99e9d820f739a4c32db4f7203c89efab71a90`. It does not recover or replace the original bridge.
 

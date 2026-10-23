@@ -28,8 +28,10 @@ or raw account archives are included. See provenance/VERSION_INDEX.json.
 
 This isolated branch adds `candidate_protocol`, a newly authored SQLite reference model
 for TTL, monotone time, claims/renewals, fencing, terminal cancellation, source/nonce/message
-correlation and atomic local result/outbox ingestion. It implements no provider API,
-authentication, callback, acknowledgement or delivery worker. Source and clock remain caller trust boundaries.
+correlation and atomic local result/outbox ingestion. Its optional injected Chat boundary now
+joins dispatch receipts, complete reads, validation and atomic ingestion. It implements no
+live provider binding, authentication, external callback, acknowledgement or delivery worker.
+Source, clock and injected callbacks remain caller trust boundaries.
 
 The original 90 methods remain unchanged. New candidate and independent counterexample suites are separate:
 
@@ -45,6 +47,15 @@ See `candidate_protocol/SPEC.md` for the local contract and
 `docs/INTEGRATION_EVIDENCE_REQUIRED.md` for live gates and minimum next evidence.
 Passing the offline suites cannot certify the missing original bridge or cross-system exactly-once delivery.
 
+Run the synthetic transport integration and independent counterexamples with:
+
+    python -B -m unittest candidate_protocol.tests.test_transport
+    python -B -m unittest candidate_protocol.redteam.test_transport_adversarial
+
+See [the injectable transport contract](candidate_protocol/TRANSPORT.md). Default transport is
+unwired and BLOCKED; the real complete-body route remains unavailable. No real task is dispatched by tests.
+
 Latest de-identified live-gap checkpoint: [connectivity status](docs/CONNECTIVITY_STATUS.md) and
 [single-canary acceptance specification](docs/CONNECTIVITY_ACCEPTANCE.md). Full-body retrieval is BLOCKED
-(content_omitted); no canary was sent. This checkpoint is a documentation update, not a new test result.
+(content_omitted); no canary was sent. That checkpoint records read-only live evidence;
+the separate transport tests above use generated fixtures only.

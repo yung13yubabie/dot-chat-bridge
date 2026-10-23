@@ -1,6 +1,8 @@
 # Evidence still required for a real bridge
 
-The offline candidate has no adapter, transport or callback. Nothing here changes probe_chat_v1.
+The offline candidate has an injected Chat transport boundary with generated fixture tests;
+it has no live provider binding or external callback. See ../candidate_protocol/TRANSPORT.md.
+Nothing here changes probe_chat_v1.
 These are next-step requirements, not completed actions or permission to create credentials.
 
 | Gate | Evidence required | This round |

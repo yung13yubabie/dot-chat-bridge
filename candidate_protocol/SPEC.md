@@ -1,7 +1,8 @@
 # Offline reconstruction candidate v1
 
 This is a new local reference protocol, not recovered bridge code or a provider API.
-No transport, callback sender, credential, service, background process or provider adapter is implemented.
+The core contract below has no live transport, callback sender, credential, service or background process.
+An optional injected Chat boundary is specified separately in TRANSPORT.md; its integration tests use fixtures.
 Passing tests proves only these local invariants. Original 36/12 tests and real Chat/Work gates remain NOT RUN.
 
 ## Public Python contract

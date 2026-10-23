@@ -158,6 +158,14 @@ class Store:
                 task_id TEXT NOT NULL UNIQUE REFERENCES results(task_id),
                 payload_json TEXT NOT NULL,
                 recorded_at_ms INTEGER NOT NULL)""")
+            self._conn.execute("""CREATE TABLE IF NOT EXISTS dispatch_attempts (
+                task_id TEXT PRIMARY KEY REFERENCES tasks(task_id),
+                nonce TEXT NOT NULL, worker TEXT NOT NULL, generation INTEGER NOT NULL,
+                prompt TEXT NOT NULL, baseline_json TEXT NOT NULL, baseline_messages_json TEXT NOT NULL,
+                requested_model TEXT,
+                state TEXT NOT NULL CHECK(state IN ('uncertain','bound')),
+                deadline_ms INTEGER NOT NULL, reads INTEGER NOT NULL DEFAULT 0,
+                conversation_id TEXT NOT NULL)""")
             self._conn.commit()
         except BaseException:
             self._conn.rollback()
@@ -275,6 +283,13 @@ class Store:
         return self._mutate(command)
 
     def ingest(self, lease, source, reply):
+        return self._ingest(lease, source, reply, None)
+
+    def ingest_transport(self, lease, source, reply, turn_id, user_message_id):
+        """Atomically bind the observed receiver turn/request to result identity."""
+        return self._ingest(lease, source, reply, (turn_id, user_message_id))
+
+    def _ingest(self, lease, source, reply, transport_identity):
         def command(now):
             _ingest_input(lease, source, reply)
             row = self._task(lease.task_id)
@@ -286,10 +301,21 @@ class Store:
                 raise ProtocolError("source_mismatch")
             if reply.receiver != row["target"]:
                 raise ProtocolError("receiver_mismatch")
+            if transport_identity is not None:
+                for identity in transport_identity:
+                    _identifier(identity)
+                attempt = self.dispatch_snapshot(lease)
+                if attempt["state"] != "bound":
+                    raise ProtocolError("dispatch_unresolved")
+                if row["state"] != "completed" and now >= attempt["deadline_ms"]:
+                    raise ProtocolError("dispatch_timeout")
             payload = {"source": asdict(source),
                        "claim": {"task_id": lease.task_id, "nonce": lease.nonce,
                                  "worker": lease.worker, "generation": lease.generation},
                        "reply": asdict(reply)}
+            if transport_identity is not None:
+                payload["transport_identity"] = {"turn_id": transport_identity[0],
+                                                 "user_message_id": transport_identity[1]}
             canonical = _canonical(payload)
             fingerprint = hashlib.sha256(canonical.encode("utf-8")).hexdigest()
             if row["state"] == "completed":
@@ -330,6 +356,101 @@ class Store:
     def snapshot(self, task_id):
         _identifier(task_id)
         return dict(self._task(task_id))
+
+    def _active_claim(self, lease, now):
+        _lease_input(lease)
+        row = self._task(lease.task_id)
+        self._matching(row, lease)
+        self._live(row, now)
+        if row["state"] != "claimed":
+            raise ProtocolError("lease_mismatch")
+        if now >= row["lease_until_ms"]:
+            raise ProtocolError("lease_expired")
+        return row
+
+    def dispatch_snapshot(self, lease):
+        """Local dispatch journal only; it does not attest external delivery."""
+        _lease_input(lease)
+        task = self._task(lease.task_id)
+        self._matching(task, lease)
+        attempt = self._conn.execute("SELECT * FROM dispatch_attempts WHERE task_id=?", (lease.task_id,)).fetchone()
+        if attempt is None:
+            raise ProtocolError("dispatch_not_found")
+        if (attempt["nonce"], attempt["worker"], attempt["generation"]) != (
+                lease.nonce, lease.worker, lease.generation):
+            raise ProtocolError("dispatch_fence_mismatch")
+        result = dict(attempt)
+        result["baseline_turn_ids"] = json.loads(result.pop("baseline_json"))
+        result["baseline_message_ids"] = json.loads(result.pop("baseline_messages_json"))
+        result["target"] = task["target"]
+        return result
+
+    def reserve_dispatch(self, lease, prompt, baseline_turn_ids, requested_model=None, *, baseline_message_ids):
+        """Commit uncertainty before external I/O. A task can never be re-dispatched."""
+        def command(now):
+            row = self._active_claim(lease, now)
+            if row["target"] != "Chat":
+                raise ProtocolError("channel_unwired")
+            if not isinstance(prompt, str) or not prompt.strip():
+                raise ProtocolError("invalid_input")
+            try:
+                if len(prompt.encode("utf-8")) > 16384:
+                    raise ProtocolError("invalid_input")
+            except UnicodeEncodeError:
+                raise ProtocolError("invalid_input") from None
+            for identities in (baseline_turn_ids, baseline_message_ids):
+                if not isinstance(identities, list) or len(identities) > 10000:
+                    raise ProtocolError("invalid_input")
+                for identity in identities:
+                    _identifier(identity)
+                if len(set(identities)) != len(identities):
+                    raise ProtocolError("invalid_input")
+            if requested_model is not None and (not isinstance(requested_model, str)
+                    or not requested_model.strip() or len(requested_model) > 128):
+                raise ProtocolError("invalid_input")
+            if self._conn.execute("SELECT 1 FROM dispatch_attempts WHERE task_id=?", (lease.task_id,)).fetchone():
+                raise ProtocolError("dispatch_already_attempted")
+            deadline = min(_add(now, 90000), row["expires_at_ms"], row["lease_until_ms"])
+            self._conn.execute("""INSERT INTO dispatch_attempts
+                (task_id,nonce,worker,generation,prompt,baseline_json,baseline_messages_json,requested_model,state,deadline_ms,conversation_id)
+                VALUES (?,?,?,?,?,?,?,?,'uncertain',?,?)""",
+                (lease.task_id, lease.nonce, lease.worker, lease.generation, prompt,
+                 _canonical(baseline_turn_ids), _canonical(baseline_message_ids), requested_model, deadline, row["conversation_id"]))
+            return self.dispatch_snapshot(lease)
+        return self._mutate(command)
+
+    def bind_dispatch(self, lease, conversation_id):
+        def command(now):
+            row = self._active_claim(lease, now)
+            _identifier(conversation_id)
+            attempt = self.dispatch_snapshot(lease)
+            if attempt["state"] != "uncertain" or now >= attempt["deadline_ms"]:
+                raise ProtocolError("dispatch_unresolved")
+            if conversation_id != row["conversation_id"]:
+                raise ProtocolError("source_mismatch")
+            self._conn.execute("UPDATE dispatch_attempts SET state='bound' WHERE task_id=?", (lease.task_id,))
+            return self.dispatch_snapshot(lease)
+        return self._mutate(command)
+
+    def prepare_dispatch_read(self, lease, *, consume=False):
+        """Check persisted deadline/fence and reserve each read before its I/O."""
+        def command(now):
+            _lease_input(lease)
+            attempt = self.dispatch_snapshot(lease)
+            if attempt["state"] != "bound":
+                raise ProtocolError("dispatch_unresolved")
+            row = self._task(lease.task_id)
+            if consume or row["state"] != "completed":
+                self._active_claim(lease, now)
+                if now >= attempt["deadline_ms"]:
+                    raise ProtocolError("dispatch_timeout")
+            if consume:
+                if attempt["reads"] >= 3:
+                    raise ProtocolError("read_budget_exhausted")
+                self._conn.execute("UPDATE dispatch_attempts SET reads=reads+1 WHERE task_id=?", (lease.task_id,))
+                attempt["reads"] += 1
+            return attempt
+        return self._mutate(command)
 
     def pending_returns(self):
         rows = self._conn.execute("SELECT payload_json FROM outbox ORDER BY recorded_at_ms, event_id").fetchall()

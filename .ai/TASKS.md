@@ -5,7 +5,7 @@
 - Define any reconstruction as a new candidate and implement its gates with synthetic data.
 
 ## DOING
-- No background worker or automatic provider action. Use saved manifests/results to reproduce the offline save point.
+- No background worker or automatic provider action. Reproduce the candidate with the manifest and offline suites.
 
 ## BLOCKED
 - Original source, original tests, provider binding and complete final Chat body are unavailable.
@@ -20,3 +20,7 @@
 - Independent 33-method/340-subtest adversarial suite and bounded spec review passed; 9 matrix rows retain NOT RUN variants.
 - Fresh quality review approved within offline scope; no confirmed important defect.
 - Save the de-identified read-only connectivity status and bounded future acceptance specification; no new tests or task dispatch.
+- Join injected native Chat send/read receipts, exact prompt/full result validation and atomic local ingest.
+- Persist uncertainty before send, baseline turn/message IDs and the three-read/90-second bound; never resend.
+- Add 25 fixture integration and 41 independent boundary methods; independent review approved within local scope.
+- Pass the combined 256-method save-point regression (90 preserved, 92 candidate, 74 independent).
