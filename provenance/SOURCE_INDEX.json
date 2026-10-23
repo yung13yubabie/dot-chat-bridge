@@ -1,0 +1,78 @@
+[
+  {
+    "source_relative_path": "native-bridge-probe/receipt_check.py",
+    "source_sha256": "c5ce2e0213458b53420a31467f15a4b816db01ce48c8661e1692e61138770e71",
+    "preserved_path": "native-bridge-probe/receipt_check.py",
+    "category": "new_evidence_utility_or_test",
+    "adaptation": "LF-normalized copy; behavior unchanged",
+    "preserved_sha256": "c5ce2e0213458b53420a31467f15a4b816db01ce48c8661e1692e61138770e71"
+  },
+  {
+    "source_relative_path": "native-bridge-probe/correlated_result.py",
+    "source_sha256": "c68d4e1511f6d9c24077008611707117ec532da003774036c940bdf5ef80c18b",
+    "preserved_path": "native-bridge-probe/correlated_result.py",
+    "category": "new_evidence_utility_or_test",
+    "adaptation": "LF-normalized copy; behavior unchanged",
+    "preserved_sha256": "c68d4e1511f6d9c24077008611707117ec532da003774036c940bdf5ef80c18b"
+  },
+  {
+    "source_relative_path": "native-bridge-probe/test_receipt_check.py",
+    "source_sha256": "2141646c350dcdf8000773a8bfa47a93ae406e5e714e2329e1d044bf42eb2798",
+    "preserved_path": "native-bridge-probe/test_receipt_check.py",
+    "category": "new_evidence_utility_or_test",
+    "adaptation": "LF-normalized copy; behavior unchanged",
+    "preserved_sha256": "2141646c350dcdf8000773a8bfa47a93ae406e5e714e2329e1d044bf42eb2798"
+  },
+  {
+    "source_relative_path": "native-bridge-probe/test_correlated_result.py",
+    "source_sha256": "8a07593c7ed91d4c6f183c21098416132119929149ec60a00aa842e1a907a2d8",
+    "preserved_path": "native-bridge-probe/test_correlated_result.py",
+    "category": "new_evidence_utility_or_test",
+    "adaptation": "LF-normalized copy; behavior unchanged",
+    "preserved_sha256": "8a07593c7ed91d4c6f183c21098416132119929149ec60a00aa842e1a907a2d8"
+  },
+  {
+    "source_relative_path": "native-bridge-probe/redteam/test_adversarial_receipts.py",
+    "source_sha256": "84ffb44b426a4b8d6b63bb2a77652ab02704166b8ee049a757208de3d673eb81",
+    "preserved_path": "native-bridge-probe/redteam/test_adversarial_receipts.py",
+    "category": "new_evidence_utility_or_test",
+    "adaptation": "LF-normalized copy; behavior unchanged",
+    "preserved_sha256": "84ffb44b426a4b8d6b63bb2a77652ab02704166b8ee049a757208de3d673eb81"
+  },
+  {
+    "source_relative_path": "native-bridge-probe/redteam/test_correlation_independent_20261023.py",
+    "source_sha256": "8854d9a0f958fe12220fabed9cd6dbc78b17ba47dcb8fd655027686342a73a79",
+    "preserved_path": "native-bridge-probe/redteam/test_correlation_independent_20261023.py",
+    "category": "new_evidence_utility_or_test",
+    "adaptation": "Account identifiers replaced by fixed synthetic aliases; synthetic fixture paths; minimal pure-code history replaces raw archive; 90 test behaviors preserved",
+    "preserved_sha256": "82b3c89f9a8e5f6fedfc55be0db1e1ee097e0d8bd691b8e4a34fa01df9eb1c53"
+  },
+  {
+    "source_relative_path": "native-bridge-probe/redteam/test_final_identity_duplicates_20261023.py",
+    "source_sha256": "de0d360d76583ad69ac759743f3e301de48251fa9b6650437c648aee3ed93ab3",
+    "preserved_path": "native-bridge-probe/redteam/test_final_identity_duplicates_20261023.py",
+    "category": "new_evidence_utility_or_test",
+    "adaptation": "LF-normalized copy; behavior unchanged",
+    "preserved_sha256": "de0d360d76583ad69ac759743f3e301de48251fa9b6650437c648aee3ed93ab3"
+  },
+  {
+    "source_relative_path": "native-bridge-probe/redteam/test_final_lifecycle_20261023.py",
+    "source_sha256": "60738ffa73dca52cc7afb4fbd9e47594ea4884fa33b8fadf420252e0f3b93ea3",
+    "preserved_path": "native-bridge-probe/redteam/test_final_lifecycle_20261023.py",
+    "category": "new_evidence_utility_or_test",
+    "adaptation": "LF-normalized copy; behavior unchanged",
+    "preserved_sha256": "60738ffa73dca52cc7afb4fbd9e47594ea4884fa33b8fadf420252e0f3b93ea3"
+  },
+  {
+    "source_relative_path": "evidence/final-gates-20261023/FINAL_HANDOFF.md",
+    "source_sha256": "897dc03627b8a4915b86978beccd496eac7850a663d4b9adab23ba953d538810",
+    "category": "original_local_handoff_or_validation_record",
+    "raw_content_published": false
+  },
+  {
+    "source_relative_path": "evidence/final-gates-20261023/final-combined-tests.txt",
+    "source_sha256": "64402d223c1366b26cd719913fc8736a4e48ce524bc6a5b080000291b35d4a0b",
+    "category": "original_local_handoff_or_validation_record",
+    "raw_content_published": false
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "snapshot_version": "2026.10.23-preservation.1",
+  "categories": [
+    {
+      "id": "original-deployment-metadata",
+      "kind": "traceable_metadata_only",
+      "source_bytes": false
+    },
+    {
+      "id": "added-parser-history",
+      "kind": "new_work_minimal_code_snapshot",
+      "original_bridge": false
+    },
+    {
+      "id": "current-evidence-utilities",
+      "kind": "new_work_parsers_and_90_tests",
+      "original_bridge": false
+    },
+    {
+      "id": "synthetic-fixtures",
+      "kind": "generated_deidentified_test_data",
+      "live_acceptance": false
+    },
+    {
+      "id": "reconstruction-design",
+      "kind": "candidate_specification_only",
+      "implemented_bridge": false
+    }
+  ],
+  "excluded_types": [
+    "raw account and user records",
+    "native account capture identifiers",
+    "full prior archives",
+    "credentials and cookies",
+    "environment files",
+    "databases and queued task data",
+    "private source references"
+  ]
+}

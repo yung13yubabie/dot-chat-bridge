@@ -1,0 +1,23 @@
+{
+  "fixture_only": true,
+  "task_id": "fixture_chat",
+  "nonce": "fixture-chat-nonce",
+  "sender": "DOT",
+  "target": "Chat",
+  "prompt": "task_id=fixture_chat nonce=fixture-chat-nonce sender=DOT target=Chat answer=42",
+  "expected_answer": "42",
+  "requested_model": null,
+  "model_policy": "inherit_conversation",
+  "transport": "mcp__codex_app__send_message_to_thread",
+  "result": {
+    "fixture_only": true,
+    "structuredContent": {
+      "threadId": "fixture-chat-thread"
+    },
+    "isError": false
+  },
+  "thread_id": "fixture-chat-thread",
+  "baseline_turn_ids": [
+    "fixture-prior-turn"
+  ]
+}

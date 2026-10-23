@@ -1,0 +1,11 @@
+{
+  "category": "original_deployment_metadata_only",
+  "source_commit": "e83dfd686462cf882d37d5d622e64b4bb17d0476",
+  "archive_sha256": "977a29797b1c99dc9b03a67dd9ed8ef8d104bb5b18878599db218251aa8498b4",
+  "archive_format": "tar",
+  "archive_size_bytes": 1474560,
+  "archive_file_count": 62,
+  "source_bytes_retrieved": false,
+  "original_tests_36_12_available": false,
+  "access_state": "existing_archive_not_visible_in_official_file_surface_do_not_retry_or_bypass"
+}

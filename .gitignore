@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.sqlite*
+*.db
+*.bundle
+*.zip
+*.tar
+node_modules/
+dist/

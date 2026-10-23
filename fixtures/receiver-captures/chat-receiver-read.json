@@ -1,0 +1,34 @@
+{
+  "fixture_only": true,
+  "structuredContent": {
+    "thread": {
+      "id": "fixture-chat-thread",
+      "kind": "chatgpt"
+    },
+    "turns": [
+      {
+        "id": "fixture-chat-user",
+        "status": "completed",
+        "error": null,
+        "items": [
+          {
+            "type": "userMessage",
+            "id": "fixture-chat-user",
+            "content": [
+              {
+                "type": "text",
+                "text": "task_id=fixture_chat nonce=fixture-chat-nonce sender=DOT target=Chat answer=42"
+              }
+            ]
+          },
+          {
+            "type": "agentMessage",
+            "id": "fixture-chat-reply",
+            "text": "::chatgpt-content-reference{source_message_id=\"fixture-chat-reply\"}"
+          }
+        ]
+      }
+    ]
+  },
+  "isError": false
+}

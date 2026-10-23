@@ -1,0 +1,167 @@
+{
+  "snapshot_version": "2026.10.23-preservation.1",
+  "test_methods": 90,
+  "scope": "deidentified_new_evidence_utilities_and_metadata_not_original_bridge",
+  "files": [
+    {
+      "path": ".ai/CURRENT_STATE.md",
+      "bytes": 583,
+      "sha256": "334b8fe9965c018ea768a72b3b71a3d0c1e43591c4c7ea32e83dbe3d9a610ee9"
+    },
+    {
+      "path": ".ai/DECISIONS.md",
+      "bytes": 510,
+      "sha256": "1d0643ee254636a1181c61a2eb7d4f98d1521a2c67e733a4cf1d77556b434575"
+    },
+    {
+      "path": ".ai/HANDOFF.md",
+      "bytes": 512,
+      "sha256": "57681401207de5feec96b2817defcf73254afd36be2b4c8993b6497669b5ba30"
+    },
+    {
+      "path": ".ai/TASKS.md",
+      "bytes": 617,
+      "sha256": "137d8980c218e26cdefeb4696dd4988d2b67c8cd17e9bb63e2cb0ec425ebed8f"
+    },
+    {
+      "path": ".ai/spec-kit.md",
+      "bytes": 586,
+      "sha256": "74a1509e8a47cee915e93f86def14b73cd7f7027fff0433a7f3835e98863bce3"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 19,
+      "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 122,
+      "sha256": "c042b29f5247863961a9dcc50e46818d5f6cf85bd589debf0138d877fe71b7bc"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1237,
+      "sha256": "f963224666b1d17fd4b8d3a8ef1fb238ef7e9cd1d62a6e140b577d76db57898b"
+    },
+    {
+      "path": "docs/FINAL_HANDOFF.md",
+      "bytes": 1547,
+      "sha256": "97780c06fb7e2c7a02f10da52122ccfd29b067bccdd0747b6de80615eb2903dc"
+    },
+    {
+      "path": "docs/REBUILD_GATES.md",
+      "bytes": 8995,
+      "sha256": "2250bf2baa45872ca7a17ed63a9dfddfd93a2fd7aadd1c3176bb0fd709f621f3"
+    },
+    {
+      "path": "docs/RESTORE.md",
+      "bytes": 926,
+      "sha256": "8937706eda35879076111d84e73507fe34781ef7a1a0d8b8170acbfaa856b89e"
+    },
+    {
+      "path": "fixtures/README.md",
+      "bytes": 343,
+      "sha256": "11fa0f5264d608bfc96026fc0010d77216758889a898dec8cd9fcae90a195e49"
+    },
+    {
+      "path": "fixtures/chat-dispatch.json",
+      "bytes": 608,
+      "sha256": "06204a0dc31a2f0178fb10825219342d8e59f0fd8a8936cb7402c19a8867c61c"
+    },
+    {
+      "path": "fixtures/receiver-captures/chat-receiver-read.json",
+      "bytes": 813,
+      "sha256": "d665f2f8d8aa7b2d9b8f7fc3d3d37cdf0ab79694c434c5b3287adbd3a958f00b"
+    },
+    {
+      "path": "fixtures/receiver-captures/work-receiver-read.json",
+      "bytes": 849,
+      "sha256": "a66a7df73f1185ca3bdce01f01e94474afa5111a321af7358905d4202e218fc2"
+    },
+    {
+      "path": "fixtures/work-dispatch.json",
+      "bytes": 599,
+      "sha256": "ecfdb1257c9db8c322ff399c6d218da61bdd51d43e9ba7f7c59e6d479ca00166"
+    },
+    {
+      "path": "missing/MISSING_CONTENT.md",
+      "bytes": 645,
+      "sha256": "0f663d86f578f137fd5556e35e204806f76372b55de96fa84b04745069be4fe8"
+    },
+    {
+      "path": "native-bridge-probe/correlated_result.py",
+      "bytes": 5681,
+      "sha256": "c68d4e1511f6d9c24077008611707117ec532da003774036c940bdf5ef80c18b"
+    },
+    {
+      "path": "native-bridge-probe/receipt_check.py",
+      "bytes": 8431,
+      "sha256": "c5ce2e0213458b53420a31467f15a4b816db01ce48c8661e1692e61138770e71"
+    },
+    {
+      "path": "native-bridge-probe/redteam/test_adversarial_receipts.py",
+      "bytes": 8015,
+      "sha256": "84ffb44b426a4b8d6b63bb2a77652ab02704166b8ee049a757208de3d673eb81"
+    },
+    {
+      "path": "native-bridge-probe/redteam/test_correlation_independent_20261023.py",
+      "bytes": 12452,
+      "sha256": "82b3c89f9a8e5f6fedfc55be0db1e1ee097e0d8bd691b8e4a34fa01df9eb1c53"
+    },
+    {
+      "path": "native-bridge-probe/redteam/test_final_identity_duplicates_20261023.py",
+      "bytes": 6220,
+      "sha256": "de0d360d76583ad69ac759743f3e301de48251fa9b6650437c648aee3ed93ab3"
+    },
+    {
+      "path": "native-bridge-probe/redteam/test_final_lifecycle_20261023.py",
+      "bytes": 5179,
+      "sha256": "60738ffa73dca52cc7afb4fbd9e47594ea4884fa33b8fadf420252e0f3b93ea3"
+    },
+    {
+      "path": "native-bridge-probe/test_correlated_result.py",
+      "bytes": 3885,
+      "sha256": "8a07593c7ed91d4c6f183c21098416132119929149ec60a00aa842e1a907a2d8"
+    },
+    {
+      "path": "native-bridge-probe/test_receipt_check.py",
+      "bytes": 8045,
+      "sha256": "2141646c350dcdf8000773a8bfa47a93ae406e5e714e2329e1d044bf42eb2798"
+    },
+    {
+      "path": "provenance/ORIGINAL_DEPLOYMENT.json",
+      "bytes": 469,
+      "sha256": "61b9f9ce2dc3c728df2cf6d62bbd25fcfdf5fea810ccde67517f2bbe3d495ae0"
+    },
+    {
+      "path": "provenance/SOURCE_INDEX.json",
+      "bytes": 4350,
+      "sha256": "1cef4bb0943fb8b4d94792d49b9448329d09e9cc5d001ab6b743e424c4bde275"
+    },
+    {
+      "path": "provenance/VERSION_INDEX.json",
+      "bytes": 979,
+      "sha256": "b2e18b5b0fc59b3bc85d8c253516fdef8846a20ad0a5f15e94cb3b0358ab16ed"
+    },
+    {
+      "path": "provenance/history/checker-hashes.json",
+      "bytes": 272,
+      "sha256": "0f437eff242288e4615bca2b5d66183f2ef3ae1b58043f3b5635896d6a337208"
+    },
+    {
+      "path": "provenance/history/receipt_check_resume.py",
+      "bytes": 6449,
+      "sha256": "b2e9ccefcc55c67ac297bcbc507ceb6e5a67a15b98440962ffab7f63329c42f5"
+    },
+    {
+      "path": "tools/run_tests.py",
+      "bytes": 601,
+      "sha256": "f43752a65684c2c1832f1a8d4ac6f43ab6a31f3eac9a48c9459d438655bd8c57"
+    },
+    {
+      "path": "tools/verify_snapshot.py",
+      "bytes": 1830,
+      "sha256": "4442bf2860de599cd77e9c0e00ff19a544e75982bd527659c71744d369c96b9f"
+    }
+  ]
+}

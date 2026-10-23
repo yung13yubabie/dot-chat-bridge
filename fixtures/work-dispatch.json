@@ -1,0 +1,23 @@
+{
+  "fixture_only": true,
+  "task_id": "fixture_work",
+  "nonce": "fixture-work-nonce",
+  "sender": "DOT",
+  "target": "Work",
+  "prompt": "task_id=fixture_work nonce=fixture-work-nonce sender=DOT target=Work answer=42",
+  "expected_answer": "42",
+  "requested_model": null,
+  "model_policy": "inherit_task_default",
+  "transport": "mcp__codex_app__create_thread",
+  "result": {
+    "fixture_only": true,
+    "structuredContent": {
+      "kind": "chatgpt",
+      "clientThreadId": "local-chatgpt:fixture-work"
+    },
+    "isError": false
+  },
+  "tool_target": {
+    "type": "chatgptWorkCloud"
+  }
+}

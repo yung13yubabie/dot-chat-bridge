@@ -1,0 +1,34 @@
+{
+  "fixture_only": true,
+  "structuredContent": {
+    "thread": {
+      "id": "fixture-work-thread",
+      "kind": "chatgpt"
+    },
+    "turns": [
+      {
+        "id": "fixture-work-user",
+        "status": "completed",
+        "error": null,
+        "items": [
+          {
+            "type": "userMessage",
+            "id": "fixture-work-user",
+            "content": [
+              {
+                "type": "text",
+                "text": "task_id=fixture_work nonce=fixture-work-nonce sender=DOT target=Work answer=42"
+              }
+            ]
+          },
+          {
+            "type": "agentMessage",
+            "id": "fixture-work-reply",
+            "text": "DOT_BRIDGE_RESULT task_id=fixture_work nonce=fixture-work-nonce answer=42 receiver=Work return_target=DOT"
+          }
+        ]
+      }
+    ]
+  },
+  "isError": false
+}
