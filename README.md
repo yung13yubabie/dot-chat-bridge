@@ -44,3 +44,7 @@ and checks the full development allowlist. No baseline hashes are rewritten to h
 See `candidate_protocol/SPEC.md` for the local contract and
 `docs/INTEGRATION_EVIDENCE_REQUIRED.md` for live gates and minimum next evidence.
 Passing the offline suites cannot certify the missing original bridge or cross-system exactly-once delivery.
+
+Latest de-identified live-gap checkpoint: [connectivity status](docs/CONNECTIVITY_STATUS.md) and
+[single-canary acceptance specification](docs/CONNECTIVITY_ACCEPTANCE.md). Full-body retrieval is BLOCKED
+(content_omitted); no canary was sent. This checkpoint is a documentation update, not a new test result.

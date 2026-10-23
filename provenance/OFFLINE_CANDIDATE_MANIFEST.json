@@ -11,8 +11,8 @@
   "files": [
     {
       "path": ".ai/CURRENT_STATE.md",
-      "bytes": 1042,
-      "sha256": "47610418a99e1d222a683d6c3536d2625210f929e7a2a11cfffa84e94a7d29e2"
+      "bytes": 1379,
+      "sha256": "64b6d6162d477a1317dfe728a061d01421f466ec5254ce86439d68117023ef97"
     },
     {
       "path": ".ai/DECISIONS.md",
@@ -21,8 +21,8 @@
     },
     {
       "path": ".ai/HANDOFF.md",
-      "bytes": 1222,
-      "sha256": "02df1ce7555ab4a8a325dd5ec87322cb9c22d4e39c4a11af681fae2abcaa838a"
+      "bytes": 1640,
+      "sha256": "05f0d5e9050c197658dfbecb9b08ef5a62b580b9ab413635d09f3a0b3a017840"
     },
     {
       "path": ".ai/spec-kit.md",
@@ -31,8 +31,8 @@
     },
     {
       "path": ".ai/TASKS.md",
-      "bytes": 1078,
-      "sha256": "11e71f6c7d8438945c7d20291cf1d8a6860cc114c4efb02501844c399d83b16f"
+      "bytes": 1330,
+      "sha256": "d37b0c9b0b71b85733fe9bb41cef94d33c4bdaca637368f6e5fcaba70ee2a7b6"
     },
     {
       "path": ".gitattributes",
@@ -78,6 +78,16 @@
       "path": "candidate_protocol/tests/test_store.py",
       "bytes": 27162,
       "sha256": "ab08038a24f51b0c7f54b4a4cc093b9dbc0d3848f95c4c1067139e85bd602122"
+    },
+    {
+      "path": "docs/CONNECTIVITY_ACCEPTANCE.md",
+      "bytes": 3518,
+      "sha256": "a8aa22f29dee2eb7de32d0603904377ae3352fec807527379f4c37fbf9dd2220"
+    },
+    {
+      "path": "docs/CONNECTIVITY_STATUS.md",
+      "bytes": 2696,
+      "sha256": "6e4d09596b97e55ea0a383401678d9d977cca252d802087091f27cdb1296516f"
     },
     {
       "path": "docs/FINAL_HANDOFF.md",
@@ -211,8 +221,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2483,
-      "sha256": "4563c36984adfff6887b80664dcf905f9e528f04d8daa89b6b981813d4d7dd6c"
+      "bytes": 2792,
+      "sha256": "216dc4a1ffef924c054bd2a1939532604696a17d33efd17a48fe34e64428fb0c"
     },
     {
       "path": "tools/run_offline_suites.py",

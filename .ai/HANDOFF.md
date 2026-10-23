@@ -11,3 +11,8 @@ Use tools/verify_candidate.py and tools/run_offline_suites.py at the development
 Latest candidate overview: docs/OFFLINE_CANDIDATE_HANDOFF.md. Session evidence contains exact commit/tree,
 artifact hashes, combined/restore results and independent reports. Keep 90 preserved, 67 candidate and 33 independent
 methods separate; the 340 subtests are expansions within independent methods. Never call PARTIAL rows fully covered.
+
+Latest live-gap notes: docs/CONNECTIVITY_STATUS.md and docs/CONNECTIVITY_ACCEPTANCE.md. Body retrieval remains
+BLOCKED with content_omitted; original deployed ingestion/callback is unproved and canary was not sent.
+The notes contain no actual conversation/message IDs or raw receipts. Do not retry the same omitted body, send a
+new task, overwrite the fixed probe or infer live success from historical offline tests.
