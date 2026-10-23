@@ -5,24 +5,24 @@
   "test_method_counts": {
     "preserved_methods": 90,
     "candidate_methods": 92,
-    "independent_methods": 74
+    "independent_methods": 83
   },
   "live_bridge_acceptance": "NOT RUN",
   "files": [
     {
       "path": ".ai/CURRENT_STATE.md",
-      "bytes": 1753,
-      "sha256": "bca94f40bbd22095d36c1f45e7a3672ecae99b2795f33ccde55eded5f59a0a3a"
+      "bytes": 2066,
+      "sha256": "8682b04dc2dbb2eade0b9e62a5369d0fcaaeac8cc10efc25e360bc3dbfd9a273"
     },
     {
       "path": ".ai/DECISIONS.md",
-      "bytes": 1629,
-      "sha256": "ed7bf31932f8bd7d16ee7ae1c690b73e8fb60d3c78c5b0c0ac127bba9a19c8f0"
+      "bytes": 1950,
+      "sha256": "85abdaceb71f8835fd2874f588551d549fbe79bda78a386c3911afc878c40e49"
     },
     {
       "path": ".ai/HANDOFF.md",
-      "bytes": 2364,
-      "sha256": "d65a58cdb0e24fa2535342efb8da3e4ccd865f735565012ac2ff772b3129e92f"
+      "bytes": 2804,
+      "sha256": "8355bcecf347bd11819c2122a01e4d9898088373a99202544427662d8949230e"
     },
     {
       "path": ".ai/spec-kit.md",
@@ -31,8 +31,8 @@
     },
     {
       "path": ".ai/TASKS.md",
-      "bytes": 1760,
-      "sha256": "626626081863fbedded0c55cb41dd1c3521bda127a5f71312510ff73a3651510"
+      "bytes": 2071,
+      "sha256": "aa1b1621ffc65788d5af61822bc257a5630a8b38f62dd2b5d7e9571ebbab36aa"
     },
     {
       "path": ".gitattributes",
@@ -58,6 +58,11 @@
       "path": "candidate_protocol/redteam/test_adversarial.py",
       "bytes": 37895,
       "sha256": "f17e0f6557bfc10c2c24adf4411c9b27c90d32d05b7c1f118542adfe55aac54e"
+    },
+    {
+      "path": "candidate_protocol/redteam/test_reader_contract.py",
+      "bytes": 11957,
+      "sha256": "332dba733935dabe52948e450b68efb16f3670773c64005a0610c15901906003"
     },
     {
       "path": "candidate_protocol/redteam/test_transport_adversarial.py",
@@ -86,18 +91,18 @@
     },
     {
       "path": "candidate_protocol/tests/test_transport.py",
-      "bytes": 17373,
-      "sha256": "459852fb99544333a3c4c4a07aacd064931d8886400480872c79883f2f040828"
+      "bytes": 17452,
+      "sha256": "16fed722714fff9ba3653f6d68cdfbd6e49455c964d72d63cba5a218a65c5faa"
     },
     {
       "path": "candidate_protocol/TRANSPORT.md",
-      "bytes": 5362,
-      "sha256": "2c76ce5820aa2a15a6d9d54bdafbd091a32ccd4e7f653e234ca67e3126deca61"
+      "bytes": 6145,
+      "sha256": "e9b44de81b9248e9d98e9687c8ad89dbb992d9ecc5d5f935fa7ee9717450b4f7"
     },
     {
       "path": "candidate_protocol/transport.py",
-      "bytes": 14394,
-      "sha256": "58e94ef79653abbcd980fbc0d98ada2a72380bce3763f843f14bd3090f816ca8"
+      "bytes": 14663,
+      "sha256": "b3a827d8f854095830beeb989a5081acb7e279ba3a5f677f5e05fc8017c8ac07"
     },
     {
       "path": "docs/CONNECTIVITY_ACCEPTANCE.md",
@@ -241,8 +246,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3421,
-      "sha256": "78480f172d23fc90c27ed85533229873638b59d04b4bdf8c8f0ec7d61e50cb2a"
+      "bytes": 3495,
+      "sha256": "7a47cb4689b94b6fb17ab8cb3019c62bb2b745dcfcc98bebccd89c7806ecab49"
     },
     {
       "path": "tools/run_offline_suites.py",

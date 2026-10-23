@@ -12,3 +12,4 @@
 - The optional Chat transport is injection-only, unwired by default, with requested model recorded separately from inherited routing and unknown actual model.
 - Persist one uncertain attempt before send and read reservations before I/O. No automatic resend, fallback or uncertain-attempt override exists.
 - Transport ingestion fingerprints the observed turn and user-message identity in the same transaction as result/completion/outbox. This binds local replay semantics, not provider authentication or external callback delivery.
+- Native read requests use the known accepted 20,000-character profile. Keep that independent of the 65,536-byte local UTF-8 body ceiling; changing either cannot resolve omitted content or message references. A strict injected contract fixture must reject oversized/native-schema-unknown arguments before returning data.

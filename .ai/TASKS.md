@@ -24,3 +24,5 @@
 - Persist uncertainty before send, baseline turn/message IDs and the three-read/90-second bound; never resend.
 - Add 25 fixture integration and 41 independent boundary methods; independent review approved within local scope.
 - Pass the combined 256-method save-point regression (90 preserved, 92 candidate, 74 independent).
+- Correct the native reader request/body-byte unit mix-up; baseline and poll now use the known accepted 20,000-character request.
+- Add 9 independent strict reader-profile/response contract methods; non-author review and all 265 regressions pass (90/92/83). No real read/send was performed for this correction.

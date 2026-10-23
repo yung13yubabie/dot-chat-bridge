@@ -11,6 +11,7 @@ Python 3.11 standard library; no packages, credentials or network are required:
 
     python -B -m unittest candidate_protocol.tests.test_transport
     python -B -m unittest candidate_protocol.redteam.test_transport_adversarial
+    python -B -m unittest candidate_protocol.redteam.test_reader_contract
     python -B tools/verify_candidate.py
     python -B tools/run_offline_suites.py
 
@@ -31,6 +32,12 @@ The intended existing Chat operations are the supported tools
 The host must supply authorized bindings; names above are not callable Python APIs.
 The send callback receives only `threadId` and `prompt`. The read callback receives
 `threadId`, `turnLimit`, `includeOutputs` and `maxOutputCharsPerItem`.
+The baseline and every poll use the known accepted request profile of 20,000
+characters per item. This conservative value comes from an accepted native read;
+the surfaced schema itself does not state a numeric maximum. A prior larger
+request was rejected before execution. Do not infer that other versions accept
+more or increase this value to resolve content references. The separate local
+body validator allows at most 65,536 UTF-8 bytes; those are different units.
 Requested model is stored separately; routing inherits the conversation model and
 actual model remains unknown. Work is explicitly unwired in this Chat adapter.
 
@@ -83,3 +90,6 @@ does not prove provider execution, actual host mode/model, real callback, delive
 or acknowledgement of the pending event, original backend ingestion, recovered
 source, original 36/12 tests, or cross-system exactly-once execution.
 Complete real Chat body remains omitted. No new real Chat/Work task was sent.
+The independent reader-contract fixture rejects unsupported argument keys and
+requests outside its conservative 1..20,000 profile. It also exercises truncated,
+paginated and omitted/reference responses; passing it is not a live reader test.

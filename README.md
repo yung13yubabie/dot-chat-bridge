@@ -51,6 +51,7 @@ Run the synthetic transport integration and independent counterexamples with:
 
     python -B -m unittest candidate_protocol.tests.test_transport
     python -B -m unittest candidate_protocol.redteam.test_transport_adversarial
+    python -B -m unittest candidate_protocol.redteam.test_reader_contract
 
 See [the injectable transport contract](candidate_protocol/TRANSPORT.md). Default transport is
 unwired and BLOCKED; the real complete-body route remains unavailable. No real task is dispatched by tests.

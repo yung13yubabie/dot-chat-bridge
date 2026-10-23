@@ -8,7 +8,10 @@ This is an isolated offline development copy restored from the verified source Z
 base commit and tree. Historical protocol-only baseline: 90 preserved, 67 regression and 33 independent methods
 (340 subtests within the historical independent suite). The injected Chat adapter adds 25 integration and
 41 independent methods, joining native-tool-shaped fixture receipts/full reads to atomic local ingestion.
-The full current 256-method run passed: 90 preserved, 92 candidate and 74 independent methods.
+The initial adapter save point passed 256 methods. The reader-contract correction adds 9 independent methods;
+the full current 265-method run passed: 90 preserved, 92 candidate and 83 independent methods.
+Baseline and poll now request the known accepted 20,000-character profile; the separate local body limit
+remains 65,536 UTF-8 bytes. The correction does not resolve omitted bodies or content references.
 Independent adapter review approved within local fixture scope. It has no live provider binding, external
 callback or deployment. See candidate_protocol/TRANSPORT.md; original/live gates remain NOT RUN.
 

@@ -15,7 +15,11 @@ methods separate; the 340 subtests are expansions within independent methods. Ne
 Latest executable candidate: candidate_protocol/TRANSPORT.md, transport.py, tests/test_transport.py and
 redteam/test_transport_adversarial.py. The injected Chat boundary uses Store's persistent attempt/read journal
 and atomic ingest_transport. Historical 67/33 methods remain; added 25 integration and 41 independent methods
-make 92 candidate and 74 independent methods, plus 90 preserved methods. The combined 256-method run passed.
+made the initial 92 candidate/74 independent/90 preserved save point pass 256 methods. The reader request fix
+adds redteam/test_reader_contract.py with 9 independent methods: the current 90/92/83 suites pass 265 methods.
+It separates the known accepted 20,000-character native profile from the 65,536-byte local body ceiling.
+The new suite rejects unsupported request arguments, unresolved/omitted content, truncation and pagination;
+changing request size is not reference resolution. Non-author reader-profile review approved within offline scope.
 Independent adapter review and exact run logs are retained outside the published repository. No live binding
 or external callback exists. Run tools/verify_candidate.py and tools/run_offline_suites.py to reproduce.
 Complete real Chat body and original/live gates remain BLOCKED/NOT RUN.

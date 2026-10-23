@@ -87,6 +87,7 @@ class TransportIntegrationTests(unittest.TestCase):
         self.assertFalse(result["live_verified"])
         self.assert_unrecorded()
         self.assertEqual(set(self.native.sent[0]), {"threadId", "prompt"})
+        self.assertEqual(self.native.reads[0]["maxOutputCharsPerItem"], 20000)
 
     def test_complete_fixture_chain_records_one_result_and_pending_return(self):
         self.dispatch()

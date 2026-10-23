@@ -10,6 +10,12 @@ import json
 from .store import Lease, ProtocolError, Reply, Source, _identifier
 
 
+# Known accepted native request profile, not a full-content/reference resolver.
+_READ_THREAD_REQUEST_CHARS = 20000
+# Local validation uses UTF-8 bytes, independently of reader character requests.
+_RESULT_BODY_UTF8_BYTES = 65536
+
+
 def _object_pairs(pairs):
     result = {}
     for key, value in pairs:
@@ -164,7 +170,7 @@ class Bridge:
     @staticmethod
     def _read_arguments(conversation_id):
         return {"threadId": conversation_id, "turnLimit": 20,
-                "includeOutputs": True, "maxOutputCharsPerItem": 65536}
+                "includeOutputs": True, "maxOutputCharsPerItem": _READ_THREAD_REQUEST_CHARS}
 
     def dispatch(self, lease, instruction, requested_model=None):
         attempt = None
@@ -271,7 +277,7 @@ class Bridge:
             if not isinstance(body, str) or not body.strip():
                 raise ProtocolError("body_unavailable")
             try:
-                if len(body.encode("utf-8")) > 65536:
+                if len(body.encode("utf-8")) > _RESULT_BODY_UTF8_BYTES:
                     raise ProtocolError("invalid_body")
             except UnicodeEncodeError:
                 raise ProtocolError("invalid_body") from None
