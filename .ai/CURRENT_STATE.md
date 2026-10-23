@@ -18,7 +18,8 @@ callback or deployment. See candidate_protocol/TRANSPORT.md; original/live gates
 Latest real checkpoint: docs/LIVE_ACCEPTANCE.md. One newly authorized native Chat send,
 receiver execution and coordinated UI pull-return to parent DOT passed. Parent-relayed worker
 evidence contained the complete assistant JSON, with matching fresh task/nonce and independent
-arithmetic. Formal assistant message UUID remains unverified. The native omitted-body reader,
+arithmetic. A later native read and parent exact global anchor confirmed the formal assistant UUID,
+but native text is a content reference and the global body is omitted. Those same reads must not be repeated. The full-body reader,
 automatic callback, actual model and original/candidate database ingestion remain unverified.
 No new dispatch, code, tests, deployment or permissions were added for this status save. The
 prior 265-method result is historical and separate. Do not resend or ingest the completed test.

@@ -11,8 +11,8 @@
   "files": [
     {
       "path": ".ai/CURRENT_STATE.md",
-      "bytes": 2348,
-      "sha256": "da73ef79364f65976bed6268925ff4d85e8316ab72275c0b208041fb2df372de"
+      "bytes": 2486,
+      "sha256": "ab141c40b9af5517a4b74960d1776012b95483286598427f368596300e73e6de"
     },
     {
       "path": ".ai/DECISIONS.md",
@@ -21,8 +21,8 @@
     },
     {
       "path": ".ai/HANDOFF.md",
-      "bytes": 3394,
-      "sha256": "b582279d65c8d515bb6be60693b64676f51e15b3f6fb6a19f7aeef08d18faefc"
+      "bytes": 3490,
+      "sha256": "6e5839d3e9f27bee8ef48f7f07c09adf08205282ae298db2aa981df0e341af71"
     },
     {
       "path": ".ai/spec-kit.md",
@@ -31,8 +31,8 @@
     },
     {
       "path": ".ai/TASKS.md",
-      "bytes": 2512,
-      "sha256": "b88c1948c3341fdd18b2bde77d7487f0d5027df49366b273e7756a6d5617c6ea"
+      "bytes": 2551,
+      "sha256": "fdfa733f335efb95e936a8e3ffce816c7e263a15bc3cc099de4b2e16f79c44d3"
     },
     {
       "path": ".gitattributes",
@@ -111,8 +111,8 @@
     },
     {
       "path": "docs/CONNECTIVITY_STATUS.md",
-      "bytes": 1993,
-      "sha256": "265cbde3995a82c0764412b72935c5d13eac642439ec54d4717f390af4128383"
+      "bytes": 2177,
+      "sha256": "d49172e5891f5065618f9746e127a985c0650d4e775765e6c8213b59c2125230"
     },
     {
       "path": "docs/FINAL_HANDOFF.md",
@@ -121,13 +121,13 @@
     },
     {
       "path": "docs/INTEGRATION_EVIDENCE_REQUIRED.md",
-      "bytes": 2736,
-      "sha256": "90008a3d1b5a06429c2b250f4c27c4fe441d879832e18571c34398f7e7d337a4"
+      "bytes": 2840,
+      "sha256": "85cac3acf65eddc7ba1a804214ec014de837823530e178f1d7af7accd9e49bd4"
     },
     {
       "path": "docs/LIVE_ACCEPTANCE.md",
-      "bytes": 6477,
-      "sha256": "75f87b60187fd55be2e665988e8d71a27cd4a3cb52778e55cbc1c65ab05526c2"
+      "bytes": 7613,
+      "sha256": "f3163c66afce44c0adf5edf690ac53ca38a1798239793cdc06468c49c2bdd2b8"
     },
     {
       "path": "docs/OFFLINE_CANDIDATE_HANDOFF.md",
@@ -143,6 +143,11 @@
       "path": "docs/RESTORE.md",
       "bytes": 926,
       "sha256": "8937706eda35879076111d84e73507fe34781ef7a1a0d8b8170acbfaa856b89e"
+    },
+    {
+      "path": "docs/SEMI_AUTOMATIC_UI_PULL.md",
+      "bytes": 3410,
+      "sha256": "ab6fd88fc1cb95f34c5e63aa8fa21e8a03047e5b2c94ee76de7fa4d51f6bfdf3"
     },
     {
       "path": "docs/superpowers/plans/2026-10-23-offline-protocol.md",
@@ -251,8 +256,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3756,
-      "sha256": "388cc3f8b8beffcbc17eda39c15ddfada920c8de260d8d1137a515b94d003361"
+      "bytes": 3869,
+      "sha256": "de548fadb846f7264326c0d20329f16dcef417d8cf776637cabe2d95f43c4564"
     },
     {
       "path": "tools/run_offline_suites.py",

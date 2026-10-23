@@ -29,6 +29,18 @@ identities and validation hashes remain in the authorized local evidence folder,
 outside this repository. Published documents contain no private conversation URL,
 message identifier, raw conversation or raw tool receipt.
 
+## Follow-up real reader diagnosis
+
+One subsequent native read returned the exact sent prompt in a completed turn
+and a formal assistant message UUID, but its assistant text was only a content
+reference. The parent's exact global read of that newly observed message
+confirmed the same anchor UUID and exact user prompt. It returned empty assistant
+text, `content_omitted=true`, `truncated=false` and no next cursor. The global
+result is parent-reported evidence, not a raw local global-reader receipt.
+Formal identity is now confirmed; complete-body access through those tools is
+still BLOCKED. Do not repeat those same reads. The earlier UI-body observation
+remains separate and was not independently UUID-visible within that UI capture.
+
 ## Limits that remain
 
 | Gate | Status |
@@ -36,8 +48,8 @@ message identifier, raw conversation or raw tool receipt.
 | Single real native dispatch and complete assistant UI reply | PASS within the scope above |
 | Receiver execution, fresh task/nonce/direction and independent arithmetic | PASS within the scope above |
 | Return of that full result to parent DOT by coordinated UI read | PASS; UI pull-return only |
-| Independently observed formal assistant message UUID | UNVERIFIED; UI did not expose it |
-| Native reader returning a complete body | NOT VERIFIED; the prior reader omitted content; this UI observation does not repair it |
+| Formal assistant message UUID | CONFIRMED by native read and parent-reported exact global anchor; UI itself did not expose it |
+| Native/global reader returning a complete body | BLOCKED; native content reference and exact global content omission; UI does not repair either tool |
 | Actual model | UNKNOWN; inherit existing conversation, no model override |
 | Automatic callback / unattended reader | NOT RUN / UNWIRED |
 | Original or candidate database ingestion | NOT RUN; intentionally excluded |
@@ -55,12 +67,12 @@ which remains unverified despite this narrower real pass.
 1. **Supported complete-body reader.** The native sender is available, but the
    candidate adapter has no live tool binding. The available conversation reader
    has no content-resource resolver. Its prior exact read had an empty assistant
-   body, `content_omitted=true`, `truncated=false` and no cursor. Increasing output
+   body, `content_omitted=true`, `truncated=false` and no cursor, now confirmed for the fresh test as well. Increasing output
    length cannot resolve it. A normal logged-in UI can show the body, as observed,
    but no unattended UI reader is configured and the shared browser is released.
    Any reader must preserve assistant role, task/nonce, completed state, fresh
-   attempt correlation and a verifiable source identity. If formal UUID cannot
-   be obtained, that gate remains unverified rather than synthesized.
+   attempt correlation and a verifiable source identity. Formal message identity
+   is now available; the complete-body tool requirement remains unmet.
 2. **Host binding and one-shot return.** A host that already owns the authorized
    send/read tools must bind them to the adapter, enforce call deadlines and keep
    a durable attempt ledger. The current candidate defaults to unwired and has
@@ -84,12 +96,17 @@ unrelated live attempt as if it were an active probe claim.
 
 ## Bounded next proposal; not executed
 
-First identify an existing supported complete-body reader and DOT return sink
-with their actual tool schemas. If both already exist under current permissions,
-review a one-shot host binding using the existing real reply: **no new Chat send,
-no old probe mutation and no database write**. Acceptance would require the host
-to read the complete assistant body itself, preserve source/task/nonce evidence,
-and deliver it once to the explicitly named DOT sink with a read-backable ACK.
+There is no exposed usable complete-body resolver in this session. The minimum
+platform support request is a documented authorized read of the existing final
+assistant message that returns its complete text together with its formal ID,
+role, completed state and explicit completeness/omission status. No new dispatch
+is needed. More characters or another identical read is not that capability.
+
+An explicitly labeled [semi-automatic UI pull procedure](SEMI_AUTOMATIC_UI_PULL.md)
+can be used under the existing one-shot UI coordination, without new credentials.
+It is not an unattended host binding or callback. After a usable reader exists,
+the real host binding and authorized DOT sink/ACK contract still need wiring and
+verification. Neither was created in this diagnosis.
 
 If the only viable reader is browser UI, obtain a dedicated short browser lease
 before any UI use. Persistent UI automation, a new sink/service, new OAuth/API

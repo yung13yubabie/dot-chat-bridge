@@ -10,7 +10,7 @@
 ## BLOCKED
 - Original source, original tests, live adapter binding and a native complete-body reader remain unavailable or unverified.
 - Original lifecycle, lease and result-ingestion contract is unverified.
-- Native reader content omission is unresolved; UI returned the new result, but automatic readback/callback and formal assistant message UUID remain unverified.
+- Native/global full-body reading remains blocked; formal assistant UUID is confirmed. UI pull-return passed, but automatic readback/callback remains unverified. Do not repeat the same blocked reads.
 
 ## DONE
 - Preserve new parsers and 90 local tests with de-identified generated fixtures.

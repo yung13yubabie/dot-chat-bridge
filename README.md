@@ -59,7 +59,8 @@ unwired and BLOCKED. No real task is dispatched by tests.
 Latest [real single-message acceptance](docs/LIVE_ACCEPTANCE.md): one native DOT send to the existing
 Chat, receiver execution and coordinated UI pull-return to parent DOT passed within scope. The full
 assistant reply matched a fresh task/nonce and an independent arithmetic oracle. Evidence is a
-parent-relayed browser-worker observation; formal assistant message UUID was not independently visible.
+parent-relayed browser-worker observation. A subsequent native read and exact parent global anchor
+confirmed the formal assistant UUID, but both tool body routes remain blocked; the UI itself did not expose the UUID.
 Automatic callback, native complete-body reader, database ingestion and full bridge acceptance remain
 unverified. The separate transport suites above use generated fixtures only. The prior 265-method
 save point was not rerun for this documentation-only checkpoint.

@@ -28,7 +28,8 @@ Latest real evidence: docs/LIVE_ACCEPTANCE.md and docs/CONNECTIVITY_STATUS.md. O
 Chat send plus coordinated UI pull-return to parent DOT passed within scope. Evidence is the
 parent-relayed browser worker's complete assistant JSON and a saved pre-dispatch oracle; exact
 private identities and raw receipts remain outside Git. The UI did not independently expose
-the assistant message UUID. Native full-body reading, automatic callback and database ingestion
+the assistant message UUID; a later native read and parent exact global anchor confirmed it.
+Both native/global full-body tool routes remain blocked. Automatic callback and database ingestion
 are not passed. No new test or task was created during this documentation save; the existing
 265 methods were not rerun without code changes. Do not resend, backfill a cancelled probe,
 ingest into the candidate DB or occupy the released shared browser.
