@@ -1,0 +1,238 @@
+{
+  "schema": "offline_reconstruction_candidate_v1",
+  "base_commit": "68f99e9d820f739a4c32db4f7203c89efab71a90",
+  "baseline_manifest_sha256": "2cc5e1e092d2aeeb4de52fa24dc668ac0599387c8b14590bc74a2baceaa5005c",
+  "test_method_counts": {
+    "preserved_methods": 90,
+    "candidate_methods": 67,
+    "independent_methods": 33
+  },
+  "live_bridge_acceptance": "NOT RUN",
+  "files": [
+    {
+      "path": ".ai/CURRENT_STATE.md",
+      "bytes": 1042,
+      "sha256": "47610418a99e1d222a683d6c3536d2625210f929e7a2a11cfffa84e94a7d29e2"
+    },
+    {
+      "path": ".ai/DECISIONS.md",
+      "bytes": 1098,
+      "sha256": "1c7c87ede35ced3063eed9e02615f8338237b06fb3889add9ad46586dd0bf5f5"
+    },
+    {
+      "path": ".ai/HANDOFF.md",
+      "bytes": 1222,
+      "sha256": "02df1ce7555ab4a8a325dd5ec87322cb9c22d4e39c4a11af681fae2abcaa838a"
+    },
+    {
+      "path": ".ai/spec-kit.md",
+      "bytes": 1038,
+      "sha256": "464b07ed64a2d7c6b854098549f9cdbc644bfb9beb5fee9c6351a5df03ea9735"
+    },
+    {
+      "path": ".ai/TASKS.md",
+      "bytes": 1078,
+      "sha256": "11e71f6c7d8438945c7d20291cf1d8a6860cc114c4efb02501844c399d83b16f"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 19,
+      "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 122,
+      "sha256": "c042b29f5247863961a9dcc50e46818d5f6cf85bd589debf0138d877fe71b7bc"
+    },
+    {
+      "path": "candidate_protocol/__init__.py",
+      "bytes": 210,
+      "sha256": "a455ab2c60564b6f98bfa6feb86e9f360f3f93765d9927acc728dcbb4027b750"
+    },
+    {
+      "path": "candidate_protocol/redteam/__init__.py",
+      "bytes": 77,
+      "sha256": "63e91eb6bbfc704519281abcd6ea0f1f198e324d90f269d9f93bc96d7d66408d"
+    },
+    {
+      "path": "candidate_protocol/redteam/test_adversarial.py",
+      "bytes": 37895,
+      "sha256": "f17e0f6557bfc10c2c24adf4411c9b27c90d32d05b7c1f118542adfe55aac54e"
+    },
+    {
+      "path": "candidate_protocol/SPEC.md",
+      "bytes": 6925,
+      "sha256": "f7f73b249c51955c53c209a9c93ddfeb660039bbef129373c6218f78d51b1d0f"
+    },
+    {
+      "path": "candidate_protocol/store.py",
+      "bytes": 14719,
+      "sha256": "2f2c6d5006466bd3a80220ae752716c9ba1c16a6f985b7d97de84599d3296c04"
+    },
+    {
+      "path": "candidate_protocol/tests/__init__.py",
+      "bytes": 74,
+      "sha256": "ac5c4c4bf6675bc04f96329b696104f05441a45dc20eb86a16bb0dc54b6bce2d"
+    },
+    {
+      "path": "candidate_protocol/tests/test_store.py",
+      "bytes": 27162,
+      "sha256": "ab08038a24f51b0c7f54b4a4cc093b9dbc0d3848f95c4c1067139e85bd602122"
+    },
+    {
+      "path": "docs/FINAL_HANDOFF.md",
+      "bytes": 1547,
+      "sha256": "97780c06fb7e2c7a02f10da52122ccfd29b067bccdd0747b6de80615eb2903dc"
+    },
+    {
+      "path": "docs/INTEGRATION_EVIDENCE_REQUIRED.md",
+      "bytes": 3893,
+      "sha256": "a3cb960e83c30b386d338cec9f4681a7466daff3d5ef6be092913f3e473b0ab2"
+    },
+    {
+      "path": "docs/OFFLINE_CANDIDATE_HANDOFF.md",
+      "bytes": 3524,
+      "sha256": "13736f5cfd839422f2195eb06f7789e9b6fcb2fce83d3c5c8cb9c2aff16396fb"
+    },
+    {
+      "path": "docs/REBUILD_GATES.md",
+      "bytes": 8995,
+      "sha256": "2250bf2baa45872ca7a17ed63a9dfddfd93a2fd7aadd1c3176bb0fd709f621f3"
+    },
+    {
+      "path": "docs/RESTORE.md",
+      "bytes": 926,
+      "sha256": "8937706eda35879076111d84e73507fe34781ef7a1a0d8b8170acbfaa856b89e"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-10-23-offline-protocol.md",
+      "bytes": 4258,
+      "sha256": "9eae65cc7b987c028a011ac63d6aa254d7268b411d2f6d629bb5382485dfce9f"
+    },
+    {
+      "path": "fixtures/chat-dispatch.json",
+      "bytes": 608,
+      "sha256": "06204a0dc31a2f0178fb10825219342d8e59f0fd8a8936cb7402c19a8867c61c"
+    },
+    {
+      "path": "fixtures/README.md",
+      "bytes": 343,
+      "sha256": "11fa0f5264d608bfc96026fc0010d77216758889a898dec8cd9fcae90a195e49"
+    },
+    {
+      "path": "fixtures/receiver-captures/chat-receiver-read.json",
+      "bytes": 813,
+      "sha256": "d665f2f8d8aa7b2d9b8f7fc3d3d37cdf0ab79694c434c5b3287adbd3a958f00b"
+    },
+    {
+      "path": "fixtures/receiver-captures/work-receiver-read.json",
+      "bytes": 849,
+      "sha256": "a66a7df73f1185ca3bdce01f01e94474afa5111a321af7358905d4202e218fc2"
+    },
+    {
+      "path": "fixtures/work-dispatch.json",
+      "bytes": 599,
+      "sha256": "ecfdb1257c9db8c322ff399c6d218da61bdd51d43e9ba7f7c59e6d479ca00166"
+    },
+    {
+      "path": "missing/MISSING_CONTENT.md",
+      "bytes": 645,
+      "sha256": "0f663d86f578f137fd5556e35e204806f76372b55de96fa84b04745069be4fe8"
+    },
+    {
+      "path": "native-bridge-probe/correlated_result.py",
+      "bytes": 5681,
+      "sha256": "c68d4e1511f6d9c24077008611707117ec532da003774036c940bdf5ef80c18b"
+    },
+    {
+      "path": "native-bridge-probe/receipt_check.py",
+      "bytes": 8431,
+      "sha256": "c5ce2e0213458b53420a31467f15a4b816db01ce48c8661e1692e61138770e71"
+    },
+    {
+      "path": "native-bridge-probe/redteam/test_adversarial_receipts.py",
+      "bytes": 8015,
+      "sha256": "84ffb44b426a4b8d6b63bb2a77652ab02704166b8ee049a757208de3d673eb81"
+    },
+    {
+      "path": "native-bridge-probe/redteam/test_correlation_independent_20261023.py",
+      "bytes": 12452,
+      "sha256": "82b3c89f9a8e5f6fedfc55be0db1e1ee097e0d8bd691b8e4a34fa01df9eb1c53"
+    },
+    {
+      "path": "native-bridge-probe/redteam/test_final_identity_duplicates_20261023.py",
+      "bytes": 6220,
+      "sha256": "de0d360d76583ad69ac759743f3e301de48251fa9b6650437c648aee3ed93ab3"
+    },
+    {
+      "path": "native-bridge-probe/redteam/test_final_lifecycle_20261023.py",
+      "bytes": 5179,
+      "sha256": "60738ffa73dca52cc7afb4fbd9e47594ea4884fa33b8fadf420252e0f3b93ea3"
+    },
+    {
+      "path": "native-bridge-probe/test_correlated_result.py",
+      "bytes": 3885,
+      "sha256": "8a07593c7ed91d4c6f183c21098416132119929149ec60a00aa842e1a907a2d8"
+    },
+    {
+      "path": "native-bridge-probe/test_receipt_check.py",
+      "bytes": 8045,
+      "sha256": "2141646c350dcdf8000773a8bfa47a93ae406e5e714e2329e1d044bf42eb2798"
+    },
+    {
+      "path": "provenance/history/checker-hashes.json",
+      "bytes": 272,
+      "sha256": "0f437eff242288e4615bca2b5d66183f2ef3ae1b58043f3b5635896d6a337208"
+    },
+    {
+      "path": "provenance/history/receipt_check_resume.py",
+      "bytes": 6449,
+      "sha256": "b2e9ccefcc55c67ac297bcbc507ceb6e5a67a15b98440962ffab7f63329c42f5"
+    },
+    {
+      "path": "provenance/ORIGINAL_DEPLOYMENT.json",
+      "bytes": 469,
+      "sha256": "61b9f9ce2dc3c728df2cf6d62bbd25fcfdf5fea810ccde67517f2bbe3d495ae0"
+    },
+    {
+      "path": "provenance/SNAPSHOT_MANIFEST.json",
+      "bytes": 5473,
+      "sha256": "2cc5e1e092d2aeeb4de52fa24dc668ac0599387c8b14590bc74a2baceaa5005c"
+    },
+    {
+      "path": "provenance/SOURCE_INDEX.json",
+      "bytes": 4350,
+      "sha256": "1cef4bb0943fb8b4d94792d49b9448329d09e9cc5d001ab6b743e424c4bde275"
+    },
+    {
+      "path": "provenance/VERSION_INDEX.json",
+      "bytes": 979,
+      "sha256": "b2e18b5b0fc59b3bc85d8c253516fdef8846a20ad0a5f15e94cb3b0358ab16ed"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2483,
+      "sha256": "4563c36984adfff6887b80664dcf905f9e528f04d8daa89b6b981813d4d7dd6c"
+    },
+    {
+      "path": "tools/run_offline_suites.py",
+      "bytes": 1578,
+      "sha256": "e2ee7fd6a9c92fde92b8e338b7744a1bbda85375b07e43cc3d68130dae87a533"
+    },
+    {
+      "path": "tools/run_tests.py",
+      "bytes": 601,
+      "sha256": "f43752a65684c2c1832f1a8d4ac6f43ab6a31f3eac9a48c9459d438655bd8c57"
+    },
+    {
+      "path": "tools/verify_candidate.py",
+      "bytes": 3930,
+      "sha256": "873cdad09fb17de38149ffc27ccff191f19ff5b89572b55c41522852f4f42817"
+    },
+    {
+      "path": "tools/verify_snapshot.py",
+      "bytes": 1830,
+      "sha256": "4442bf2860de599cd77e9c0e00ff19a544e75982bd527659c71744d369c96b9f"
+    }
+  ]
+}
