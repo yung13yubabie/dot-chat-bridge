@@ -23,3 +23,15 @@ but native text is a content reference and the global body is omitted. Those sam
 automatic callback, actual model and original/candidate database ingestion remain unverified.
 No new dispatch, code, tests, deployment or permissions were added for this status save. The
 prior 265-method result is historical and separate. Do not resend or ingest the completed test.
+
+2026-10-24 Work/handoff checkpoint: read docs/CODEX_HANDOFF.md first. One real
+native read retrieved the complete old Work-correlated assistant payload again;
+exact prompt/task/nonce/completed turn match. Strict result remains
+pending_thread_resolution: original creation returned only clientThreadId.
+The old prompt disclosed its answer; Work mode/model, provider mapping,
+independent execution and callback remain unverified. Work's old body is readable;
+the Chat full-body-tool block above must not be generalized to Work.
+The Chat-only adapter intentionally blocks Work; no code defect was repaired.
+This round ran the two existing receipt CLIs, not the 265 unit methods.
+Development and real dispatch are stopped for a docs-only Codex handoff branch.
+The cancelled probe stays untouched. Preserve private raw evidence outside Git.

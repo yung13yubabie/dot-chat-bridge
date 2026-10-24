@@ -5,12 +5,12 @@
 - Define any reconstruction as a new candidate and implement its gates with synthetic data.
 
 ## DOING
-- No background worker or automatic provider action. Reproduce the candidate with the manifest and offline suites.
+- Documentation-only Codex handoff. No worker/provider action; development and real dispatch are stopped.
 
 ## BLOCKED
-- Original source, original tests, live adapter binding and a native complete-body reader remain unavailable or unverified.
+- Original source, original tests and live adapter binding remain unavailable or unverified. Chat full-body tools are blocked; the old Work-correlated body is readable, but provider mapping/mode remain unverified.
 - Original lifecycle, lease and result-ingestion contract is unverified.
-- Native/global full-body reading remains blocked; formal assistant UUID is confirmed. UI pull-return passed, but automatic readback/callback remains unverified. Do not repeat the same blocked reads.
+- Chat native/global full-body reading remains blocked; formal assistant UUID is confirmed. Chat UI pull-return passed, but automatic readback/callback remains unverified. Do not repeat the same blocked reads.
 
 ## DONE
 - Preserve new parsers and 90 local tests with de-identified generated fixtures.
@@ -28,3 +28,5 @@
 - Add 9 independent strict reader-profile/response contract methods; non-author review and all 265 regressions pass (90/92/83). No real read/send was performed for this correction.
 - Complete one explicitly authorized real native Chat send and coordinated UI pull-return to parent DOT, matching fresh task/nonce/direction and independent arithmetic. No resend, database ingestion or automatic callback; see docs/LIVE_ACCEPTANCE.md.
 - Save the real acceptance scope and concrete minimum reader/host/sink wiring gaps; no additional fixture work or new task.
+- Read back the existing Work-correlated full payload through the native tool and preserve strict pending_thread_resolution plus limited payload-correlation evidence; no independent execution or callback claim.
+- Prepare docs/CODEX_HANDOFF.md and stop development/real dispatch for the user-requested documentation handoff. No source changes or unit-suite rerun this round.

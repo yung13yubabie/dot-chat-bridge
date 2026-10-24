@@ -11,8 +11,8 @@
   "files": [
     {
       "path": ".ai/CURRENT_STATE.md",
-      "bytes": 2486,
-      "sha256": "ab141c40b9af5517a4b74960d1776012b95483286598427f368596300e73e6de"
+      "bytes": 3323,
+      "sha256": "f1bedaa5fac64d2bd785281f47e54ac3bd0baa893297ee11a842925996e82835"
     },
     {
       "path": ".ai/DECISIONS.md",
@@ -21,8 +21,8 @@
     },
     {
       "path": ".ai/HANDOFF.md",
-      "bytes": 3490,
-      "sha256": "6e5839d3e9f27bee8ef48f7f07c09adf08205282ae298db2aa981df0e341af71"
+      "bytes": 3803,
+      "sha256": "6e732137d48dd59b2290d38cbc47cf4ff274d335355ee7dd6f236ae4fb2cf7a6"
     },
     {
       "path": ".ai/spec-kit.md",
@@ -31,8 +31,8 @@
     },
     {
       "path": ".ai/TASKS.md",
-      "bytes": 2551,
-      "sha256": "fdfa733f335efb95e936a8e3ffce816c7e263a15bc3cc099de4b2e16f79c44d3"
+      "bytes": 3016,
+      "sha256": "cd44d7aecc33448b84fd0b2ec76d0d05404d28ae7ec3564e7a283cad0580e889"
     },
     {
       "path": ".gitattributes",
@@ -103,6 +103,11 @@
       "path": "candidate_protocol/transport.py",
       "bytes": 14663,
       "sha256": "b3a827d8f854095830beeb989a5081acb7e279ba3a5f677f5e05fc8017c8ac07"
+    },
+    {
+      "path": "docs/CODEX_HANDOFF.md",
+      "bytes": 11594,
+      "sha256": "a2b59a2c85697dbdd934a8535f8a46a61498c95285a98a942f5db9c160ace8da"
     },
     {
       "path": "docs/CONNECTIVITY_ACCEPTANCE.md",
@@ -256,8 +261,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3869,
-      "sha256": "de548fadb846f7264326c0d20329f16dcef417d8cf776637cabe2d95f43c4564"
+      "bytes": 4220,
+      "sha256": "c663d8280b8508821cf0a7e7239a652c2b4c0f19929ba9fc641882d311586199"
     },
     {
       "path": "tools/run_offline_suites.py",

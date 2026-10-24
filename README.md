@@ -3,6 +3,13 @@
 This repository preserves readable, de-identified local work. It is not a recovery
 of the missing original bridge and it is not a deployed or accepted Chat/Work bridge.
 
+## Codex handoff, 2026-10-24
+
+Start with [CODEX_HANDOFF.md](docs/CODEX_HANDOFF.md). It separates real Chat and Work
+evidence, this round's completed checks, current blockers, worktree preservation,
+test commands and the required next steps. This branch changes handoff documents
+only; no new Work test, adapter, credential or deployment was created.
+
 Contents:
 
 - provenance/: traceable deployment metadata and pure code history; original source bytes are unavailable.
